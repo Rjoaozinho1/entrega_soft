@@ -1,0 +1,27 @@
+GET http://localhost:3003/veiculos
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Mywicm9sZSI6ImFkbWluIiwiaWF0IjoxNzMwOTA5OTgwLCJleHAiOjE3MzA5OTYzODB9.HM-ja7I5lNIzq7dmfdfsKiyq5eU_zM1Plge5aH2JgZ0
+###
+POST http://localhost:3003/veiculos
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Mywicm9sZSI6ImFkbWluIiwiaWF0IjoxNzMwOTA5OTgwLCJleHAiOjE3MzA5OTYzODB9.HM-ja7I5lNIzq7dmfdfsKiyq5eU_zM1Plge5aH2JgZ0
+
+{
+   "tipo": "Caminhão",
+   "peso": 1900,
+   "placa": "jqk10992"
+}
+###
+PUT http://localhost:3003/veiculo/1
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Mywicm9sZSI6ImFkbWluIiwiaWF0IjoxNzMwOTA5OTgwLCJleHAiOjE3MzA5OTYzODB9.HM-ja7I5lNIzq7dmfdfsKiyq5eU_zM1Plge5aH2JgZ0
+
+{
+    "tipo": "",
+   "preco": "",
+   "placa": ""
+}
+###
+DELETE http://localhost:3003/veiculo/1
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Mywicm9sZSI6ImFkbWluIiwiaWF0IjoxNzMwOTA5OTgwLCJleHAiOjE3MzA5OTYzODB9.HM-ja7I5lNIzq7dmfdfsKiyq5eU_zM1Plge5aH2JgZ0

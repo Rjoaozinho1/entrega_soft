@@ -1,0 +1,27 @@
+GET http://localhost:3003/produtos
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Mywicm9sZSI6ImFkbWluIiwiaWF0IjoxNzMwOTA5OTgwLCJleHAiOjE3MzA5OTYzODB9.HM-ja7I5lNIzq7dmfdfsKiyq5eU_zM1Plge5aH2JgZ0
+###
+POST http://localhost:3003/produtos
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Mywicm9sZSI6ImFkbWluIiwiaWF0IjoxNzMwOTA5OTgwLCJleHAiOjE3MzA5OTYzODB9.HM-ja7I5lNIzq7dmfdfsKiyq5eU_zM1Plge5aH2JgZ0
+
+{
+   "nome": "Macbook Air M2",
+   "valor": 1250000,
+   "created_by": 1
+}
+###
+PUT http://localhost:3003/produtos/1
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Mywicm9sZSI6ImFkbWluIiwiaWF0IjoxNzMwNzY4NDc5LCJleHAiOjE3MzA3NzU2Nzl9.kgkQtOH5YdzeU1qgfKz5yqmxmnnNkZANR4LSaJ4fNbs
+
+{
+   "nome": "Macbook Air M3",
+   "valor": 1650000,
+   "created_by": 1
+}
+###
+DELETE http://localhost:3003/produtos/1
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Mywicm9sZSI6ImFkbWluIiwiaWF0IjoxNzMwNzY4NDc5LCJleHAiOjE3MzA3NzU2Nzl9.kgkQtOH5YdzeU1qgfKz5yqmxmnnNkZANR4LSaJ4fNbs

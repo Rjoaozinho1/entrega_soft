@@ -1,0 +1,36 @@
+GET http://localhost:3003/usuarios
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Mywicm9sZSI6ImFkbWluIiwiaWF0IjoxNzMwOTA5OTgwLCJleHAiOjE3MzA5OTYzODB9.HM-ja7I5lNIzq7dmfdfsKiyq5eU_zM1Plge5aH2JgZ0
+###
+POST http://localhost:3003/usuarios
+Content-Type: application/json
+
+{
+   "email": "admin@teste.com",
+   "password": "123",
+   "role": "admin"
+}
+
+###
+POST http://localhost:3003/usuarios/login
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwicm9sZSI6ImFkbWluIiwiaWF0IjoxNzMwNzY4MTEwLCJleHAiOjE3MzA3NzUzMTB9.0Piw-v2zXwfT_NdSFpUoHSmk0Uiqsnu7jC3fsLrv0zE
+
+{
+   "email": "admin@teste.com",
+   "password": "123"
+}
+###
+PUT http://localhost:3003/usuarios/1
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwicm9sZSI6ImFkbWluIiwiaWF0IjoxNzMwNzY4MTEwLCJleHAiOjE3MzA3NzUzMTB9.0Piw-v2zXwfT_NdSFpUoHSmk0Uiqsnu7jC3fsLrv0zE
+
+{
+   "email": "entregador@teste.com",
+   "password": "12345",
+   "role": "entregador"
+}
+###
+DELETE http://localhost:3003/usuarios/2
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwicm9sZSI6ImFkbWluIiwiaWF0IjoxNzMwNzY4MTEwLCJleHAiOjE3MzA3NzUzMTB9.0Piw-v2zXwfT_NdSFpUoHSmk0Uiqsnu7jC3fsLrv0zE
