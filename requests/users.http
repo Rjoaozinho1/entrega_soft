@@ -1,6 +1,6 @@
 GET http://localhost:3003/usuarios
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Mywicm9sZSI6ImFkbWluIiwiaWF0IjoxNzMwOTA5OTgwLCJleHAiOjE3MzA5OTYzODB9.HM-ja7I5lNIzq7dmfdfsKiyq5eU_zM1Plge5aH2JgZ0
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Mywicm9sZSI6ImFkbWluIiwiaWF0IjoxNzMxMTc0ODk1LCJleHAiOjE3MzEyNjEyOTV9.0Pz65X5mhVLQobWetP0mkVPvHanaP1qxJv_Q3rswB4Y
 ###
 POST http://localhost:3003/usuarios
 Content-Type: application/json

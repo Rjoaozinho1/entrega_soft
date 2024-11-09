@@ -32,7 +32,7 @@ module.exports = {
 
     // Função para criar um novo frete
     async create(req, res) {
-        const { distance, price, status, vehicle_id, entregador_id, product_id } = req.body;
+        const { distance, price, status, peso_veiculo, entregador_id, product_id } = req.body;
         if (!distance || !price || !status) {
             return res.status(400).json({ message: "Dados incompletos" });
         }
@@ -44,11 +44,14 @@ module.exports = {
             if (duplicateCheck.rows.length > 0) {
                 return res.status(409).json({ message: "Frete duplicado" });
             }
+
+            var freteObj = calculateFreteCost(distance, peso_veiculo)
+
             const result = await db.query(
-                "INSERT INTO fretes (distance, price, status, product_id, entregador_id, vehicle_id) VALUES ($1, $2, $3, $4, $5, $6) RETURNING *",
-                [distance, price, status, product_id, entregador_id, vehicle_id]
+                "INSERT INTO fretes (distance, price, status, product_id, entregador_id) VALUES ($1, $2, $3, $4, $5) RETURNING *",
+                [distance, freteObj.driverEarnings, status, product_id, entregador_id]
             );
-            res.status(201).json(result.rows[0]);
+            res.status(201).json(result.rows[0], freteObj);
         } catch (error) {
             console.error("Erro ao criar frete:", error.message);
             res.status(500).json({ message: "Erro ao criar frete" });

@@ -24,6 +24,7 @@ module.exports = {
             if (productCheck.rows.length > 0) {
                 return res.status(400).json({ message: "Produto já existe" });
             }
+            // nome do produto, valor do produto e criador por qual empresa
             const result = await db.query(
                 "INSERT INTO produtos (nome, valor, created_by) VALUES ($1, $2, $3) RETURNING *",
                 [nome, valor, created_by]

@@ -9,10 +9,11 @@ const PORT = process.env.PORT || 3003;
 app.use(express.json());
 // Usa as rotas definidas em routes.js
 app.use("/", routes);
-
 // Inicia o servidor
 app.listen(PORT, () => {
     // Cria as tabelas ao iniciar o servidor
     createTables();
     console.log(`Servidor rodando na porta ${PORT}`);
 });
+// exporta o server
+module.exports = app;

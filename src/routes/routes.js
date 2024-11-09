@@ -8,10 +8,10 @@ const { verifyToken, checkRole } = require("../utils/auth");
 const router = express.Router();
 // Rotas de usuários
 router.get("/usuarios", verifyToken, checkRole("admin"), userController.getAll);
-router.post("/usuarios", userController.create);
+router.post("/usuarios", verifyToken, userController.create);
 router.post("/usuarios/login", userController.login);
 router.put("/usuarios/:id", verifyToken, checkRole("admin"), userController.update);
-router.delete("/usuarios/:id", verifyToken, checkRole("admin"), userController.delete);
+router.delete("/usuarios/:id", verifyToken, checkRole("admin"), userController.deleteU);
 
 // Rotas de produtos
 router.get("/produtos", verifyToken, checkRole("admin"), produtoController.getAll);
